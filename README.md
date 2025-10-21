@@ -7,7 +7,7 @@ It simulates live transaction streams, processes them in real time with Spark St
 
 ## 🚀 Architecture Overview
 
-![Real-Time Lakehouse](real_time_lakehouse.png "Real-Time Lakehouse Architecture")
+![Real-Time Lakehouse](real_time_lakehouse.jpg "Real-Time Lakehouse Architecture")
 
 **Flow Summary:**
 1. `transaction_producer.py` continuously generates random financial transactions using the **Faker** library.
