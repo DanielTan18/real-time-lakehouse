@@ -14,7 +14,6 @@ It simulates live transaction streams, processes them in real time with Spark St
 2. These messages are published to a Kafka topic named `transactions`.
 3. A **Spark Structured Streaming** job consumes this topic in real time.
 4. Spark writes the parsed transaction data into an **Iceberg table** stored in **MinIO (S3)**.
-5. The Iceberg table can then be queried using Spark SQL for analytics.
 
 ---
 
@@ -23,7 +22,7 @@ It simulates live transaction streams, processes them in real time with Spark St
 | Component | Description |
 |------------|-------------|
 | **Apache Kafka** | Message broker for real-time data streaming |
-| **Apache Spark 3.5.1** | Stream processing engine |
+| **Apache Spark** | Stream processing engine |
 | **Apache Iceberg** | Lakehouse table format with ACID guarantees |
 | **MinIO** | S3-compatible object storage |
 | **Docker Compose** | Container orchestration |
@@ -87,7 +86,7 @@ Sent: {'txn_id': '...', 'user_id': 1423, 'amount': 134.22, 'currency': 'MYR', ..
 
 ## ⚡ Step 4: Start Spark Structured Streaming
 
-Run the following command **inside the Spark container** to start the stream:
+At the same time, open another terminal and run the following command **inside the Spark container** to start the stream:
 
 ```bash
 docker exec -it spark \
