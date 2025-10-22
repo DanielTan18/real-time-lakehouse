@@ -3,15 +3,6 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Spark / Checkpoints / Logs
-spark-warehouse/
-checkpoints/
-.derby/
-logs/
-
-# MinIO data
-minio_data/
-
 # Environment files
 .env
 .env.*
